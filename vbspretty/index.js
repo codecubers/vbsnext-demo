@@ -1,11 +1,11 @@
 const vbspretty = require('vbspretty')
 var bsource = vbspretty({
-    level: 1,
-    indentChar: '\t',
-    breakLineChar: '\r\n',
+    level: 0,
+    indentChar: '    ',
+    breakLineChar: '\n',
     breakOnSeperator: false,
     removeComments: false,
-    source: require('fs').readFileSync('./vbspretty-unpretty.vbs').toString()
+    source: require('fs').readFileSync('./index-unpretty.vbs').toString()
   });
 
-  require('fs').writeFileSync('./vbspretty-pretty-js.vbs', bsource)
+  require('fs').writeFileSync('./index-pretty-js.vbs', bsource)

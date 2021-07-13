@@ -644,7 +644,7 @@ Public Sub Import(file)
 End Sub
 
 
-'================= File: C:\Users\nanda\git\xps.local.npm\vbspm-test\lib\classes\VbsJson.vbs =================
+'================= File: C:\Users\nanda\Github\vbs-revive\vbsnext-demo\vbsnext\lib\classes\VbsJson.vbs =================
 Class VbsJson
   'Author: Demon
   'Date: 2012/5/3
@@ -973,7 +973,7 @@ Class VbsJson
 End Class
 
 
-'================= File: C:\Users\nanda\git\xps.local.npm\vbspm-test\lib\json-test.vbs =================
+'================= File: C:\Users\nanda\Github\vbs-revive\vbsnext-demo\vbsnext\lib\json-test.vbs =================
 ' Include("classes\MyFSO.vbs")
 Include("classes\VbsJson")
 Dim json, str, o, i, k
@@ -1000,7 +1000,7 @@ For Each i In o("Image")("IDs")
 Next
 
 
-'================= File: C:\Users\nanda\git\xps.local.npm\vbspm-test\lib\classes\Person.vbs =================
+'================= File: C:\Users\nanda\Github\vbs-revive\vbsnext-demo\vbsnext\lib\classes\Person.vbs =================
 Class Person
   Private m_Age
   Private m_Name
@@ -1032,39 +1032,15 @@ Class Person
 End Class
 
 
-'================= File: C:\Users\nanda\git\xps.local.npm\vbspm-test\lib\person-test.vbs =================
+'================= File: C:\Users\nanda\Github\vbs-revive\vbsnext-demo\vbsnext\lib\person-test.vbs =================
 Include ".\classes\Person"
 
 Dim TheDude : Set TheDude = (New Person)("John", 40)
 WScript.Echo TheDude.toString
 
 
-'================= File: C:\Users\nanda\git\xps.local.npm\vbspm-test\node_modules\vbs-diskutil\index.vbs =================
-Class DiskUtil
-  Public Function GetFreeSpace(drvPath)
-    Dim fs, d, s
-    Set fs = CreateObject("Scripting.FileSystemObject")
-    Set d = fs.GetDrive(fs.GetDriveName(drvPath))
-    s = "Drive " + drvPath + " - "
-    s = s & d.VolumeName
-    s = s & " Free Space: " & d.FreeSpace / 1024 / 1024 / 1024 & " GB"
-    GetFreeSpace = s
-  End Function
-End Class
-
-' set du = new DiskUtil
-' Wscript.Echo du.GetFreeSpace("c:\")
-
-
-'================= File: C:\Users\nanda\git\xps.local.npm\vbspm-test\lib\disk-size.vbs =================
-Import "vbs-diskutil"
-Dim du : Set du = New DiskUtil
-WScript.Echo du.GetFreeSpace("c:\")
-
-
-'================= File: C:\Users\nanda\git\xps.local.npm\vbspm-test\index.vbs =================
+'================= File: C:\Users\nanda\Github\vbs-revive\vbsnext-demo\vbsnext\index.vbs =================
 ' 
 ' Include("json-test")
-Include("lib\disk-size")
 Include("lib\person-test")
 Include("lib\json-test")
